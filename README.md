@@ -1,2 +1,2 @@
-# practicaslab_utec
-Practicas Libres de Laboratorio UTEC
+# gesinve_ci
+Sistema de Gestion de Inventarios y Ventas
