@@ -4,12 +4,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Auth extends CI_Controller
 {
 
+	//Constructor del controlador: aca se agregan referencias a modelos
 	public function __construct()
 	{
 		parent::__construct();
 	
 	}
 
+	//funcion principal
 	public function index()
 	{
 		//verificar la session de usuario
@@ -19,12 +21,28 @@ class Auth extends CI_Controller
 
 	public function login()
 	{
+		//Temporal
 
-		$userName = $this->input->post("username");
-		$password = $this->input->post("password");
-
-			redirect(base_url() . "dashboard");
+		$user = $this->input->post("usuario");
+	
+		if($user=="estudiante" || $user=="lab" || $user=="admin")
+			$login=true;		
+		else 
+			 $login=false;
 		
+		//si el nombre de usuario ingresado es correcto enviarlo al controlador Dashboard
+		if($login==true){
+			$data  = array(
+				'usuario' => $user,
+				'login' => $login
+			);
+			$this->session->set_userdata($data);
+			redirect(base_url() . "Dashboard");
+		}
+		else
+			redirect(base_url());
+	
+
 	}
 
 

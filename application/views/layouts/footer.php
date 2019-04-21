@@ -62,8 +62,28 @@
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script> -->
   <script src="<?php echo base_url(); ?>assets/template/sweetAlert/sweetalert.js"></script>
  <!-- Custom Theme Scripts -->
+ <script>
+	$(document).ready(function(){
+ $('#tabla').DataTable({
+        "language": {
+            "lengthMenu": "Mostrar _MENU_ registros por pagina",
+            "zeroRecords": "No se encontraron resultados en su busqueda",
+            "searchPlaceholder": "Buscar registros",
+            "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
+            "infoEmpty": "No existen registros",
+            "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+            "search": "Buscar:",
+            "paginate": {
+                "first": "Primero",
+                "last": "Último",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            },
+        }
+    });
 
-
+  });
+  </script>
 
 
 <script src="<?php echo base_url();?>assets/build/js/custom.min.js"></script>

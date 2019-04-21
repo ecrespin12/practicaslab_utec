@@ -22,53 +22,28 @@
     <div class="form-row">
         <div class="login-form ">
       
-          <?php if ($this->session->flashdata("error")) : ?>   
-                  <script type="text/javascript">
-                      swal({
-                          html: true,
-                          title: "Error de Ingreso",
-                          text: "<h5 class='alertMsj'>El usuario y/o contraseña es incorrecto, verifique sus datos e intente nuevamente o póngase en contacto con el administrador.</h5>",
-                          type: "error",
-                          confirmButtonText: "Aceptar"
-                              });
-                  </script>
-            <?php endif; ?>
+
       
-          <form action="<?php echo base_url(); ?>auth/login" method="post"  class="form_SRC" data-type-form="login" autocomplete="off">
-      
-            <h2 class="text-center">Iniciar Sesion</h2>
+          <form action="<?php echo base_url(); ?>auth/login" method="post"  class="" data-type-form="login" autocomplete="off">
+    
             <div class="or-seperator"><i></i></div>
-      
+            <div class="form-row">
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12"> 
+                          <label>estudiante -admin -lab</label>                       
+                            <input type="text" name="usuario" class="form-control" placeholder="usuario" >          
+                        </div>
+                      </div>
           <div class="form-row">
               <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                  <input type="text" class="form-control" name="username" placeholder="Usuario" required="">
-                </div>
-              </div>
-          </div>
-      
-          <div class="form-row">
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                  <input type="password" class="form-control" name="password" placeholder="Contraseña" required="">
-                </div>
-              </div>
-          </div>
-      
-          <div class="form-row">
-              <div class="form-group">
+           
                 <button type="submit" class="btn btn-primary login-btn btn-block">Ingresar</button>
               </div>
-              <div class="clearfix">
-                <a href="#" class="pull-right">¿Olvido la contraseña?</a>
-              </div>
+
           </div>
       
           </form>
          
-          <p class="text-center text-muted small"> Todos los derechos reservados | Desarrollado por: <a href="http://www.deprosistemas.com">deprosistemas</a></p>
+
         </div>
     </div>
  </div>

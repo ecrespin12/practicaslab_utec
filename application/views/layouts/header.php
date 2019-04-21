@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Gesinve | Store</title>
+    <title>Practicas de Laboratorio</title>
   
 
     <!-- Bootstrap -->
@@ -17,8 +17,6 @@
     <!-- NProgress -->
     <link href="<?php echo base_url();?>assets/template/nprogress/nprogress.css" rel="stylesheet">
 
-    <!-- bootstrap-datetimepicker -->
-      <!-- <link href="<?php echo base_url();?>assets/template/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" rel="stylesheet"> -->
 
     <!-- iCheck -->
     <link href="<?php echo base_url();?>assets/template/iCheck/skins/flat/green.css" rel="stylesheet">
@@ -33,16 +31,20 @@
     <!-- bootstrap-daterangepicker -->
     <link href="<?php echo base_url();?>assets/template/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
-    <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css" rel="stylesheet"> -->
+   
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/template/sweetAlert/sweetalert.css">
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css"> -->
-
+   
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/template/datatables/dataTables.bootstrap.min.css">
 
     
    
     <!-- Style Personalizado -->
     <link href="<?php echo base_url();?>assets/build/css/custom.min.css" rel="stylesheet">
+    <style>
+        .botonesList{
+          float: right;
+     }
+    </style>
  
   </head>
 
@@ -52,7 +54,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="#" class="site_title"><i class="fa fa-shopping-bag "></i> <span> </span></a>
+              <a href="#" class="site_title"><i class="fa fa-shopping-bag "></i> <span>PRACTICAS</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -64,7 +66,7 @@
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
-                <h2>alex c</h2>
+                <h2><?php echo $this->session->userdata("usuario")?></h2>
               </div>
               <div class="clearfix"></div>
             </div>

@@ -53,47 +53,5 @@ $route['default_controller'] = 'auth';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['clientes'] = 'catalogo/Cliente';
-$route['catalogos/clientes'] = 'catalogo/Cliente';
-$route['catalogos/clientes/registrar'] = 'catalogo/Cliente/formCliente';
-$route['catalogos/clientes/editar/(:any)'] = 'catalogo/Cliente/editCliente/$1';
-$route['catalogos/clientes/eliminar/(:any)'] = 'catalogo/Cliente/deleteCliente/$1';
 
 
-$route['catalogos/sucursales'] = 'catalogo/Sucursal';
-$route['catalogos/usuarios'] = 'catalogo/Usuario';
-
-$route['compras/ingresos'] = 'compra/Ingreso';
-
-
-
-$route['categorias'] = 'producto/Categoria';
-$route['productos/categorias'] = 'producto/Categoria';
-$route['productos/categorias/registrar'] = 'producto/Categoria/formCategoria';
-$route['productos/categorias/editar/(:any)'] = 'producto/Categoria/editCategoria/$1';
-$route['productos/categorias/eliminar/(:any)'] = 'producto/Categoria/deleteCategoria/$1';
-
-$route['productos'] = 'producto/Producto';
-$route['productos/productos'] = 'producto/Producto';
-$route['productos/productos/registrar'] = 'producto/Producto/formProducto';
-$route['productos/productos/editar/(:any)'] = 'producto/Producto/editProducto/$1';
-$route['productos/productos/eliminar/(:any)'] = 'producto/Producto/deleteProducto/$1';
-
-$route['empleados'] = 'catalogo/Empleado';
-$route['catalogos/empleados'] = 'catalogo/Empleado';
-$route['catalogos/empleados/registrar'] = 'catalogo/Empleado/formEmpleado';
-$route['catalogos/empleados/editar/(:any)'] = 'catalogo/Empleado/editEmpleado/$1';
-$route['catalogos/empleados/eliminar/(:any)'] = 'catalogo/Empleado/deleteEmpleado/$1';
-
-$route['proveedores'] = 'compra/Proveedor';
-$route['compras/proveedores'] = 'compra/Proveedor';
-$route['compras/proveedores/registrar'] = 'compra/Proveedor/formProveedor';
-$route['compras/proveedores/editar/(:any)'] = 'compra/Proveedor/editProveedor/$1';
-$route['compras/proveedores/eliminar/(:any)'] = 'compra/Proveedor/deleteProveedor/$1';
-
-$route['ventas'] = 'venta/Venta';
-$route['ventas/listado'] = 'venta/Venta';
-$route['ventas/registrar'] = 'venta/Venta/formVenta';
-
-$route['ventas/precios'] = 'venta/Precio';
-$route['ventas/precios/registrar'] = 'venta/Precio/formPrecio';

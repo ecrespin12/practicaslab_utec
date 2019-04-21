@@ -1,56 +1,82 @@
-            <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section">
+   <?php
+          $user=  $this->session->userdata("usuario");
+   ?>
+   
+   <!-- sidebar menu -->
 
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Inicio<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="<?php echo base_url();?>Welcome">Estadisticas</a></li>
+   <!-- menu estudiante -->
+   <?php if($user=="estudiante"):?>
+   <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+           <div class="menu_section">
+             <ul class="nav side-menu">
+               <li><a href="<?php echo base_url();?>Dashboard"><i class="fa fa-home"></i> Inicio</a></li>
+               <li><a href="<?php echo base_url();?>Dashboard"><i class="fa fa-home"></i> Practicas</a></li>
+               <li><a href="<?php echo base_url();?>Dashboard"><i class="fa fa-home"></i> Cerrar Sesión</a></li>
+            
+             </ul>
+           </div>
+         </div>
+<?php elseif($user=="lab"):?>
+<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+           <div class="menu_section">
+             <ul class="nav side-menu">
+             <li><a href="<?php echo base_url();?>Dashboard"><i class="fa fa-home"></i> Inicio</a></li>
+             <li><a href="<?php echo base_url();?>Dashboard"><i class="fa fa-home"></i> Control Laboratorio</a></li>
+               </li>
+               <li class="current-page"><a href="#"><i class="fa fa-calendar"></i> Programar Practica<span class="fa fa-chevron-down"></span></a>
+                 <ul class="nav child_menu">
+                   <li><a href="#">Dia</a></li>
+                   <li><a href="#">Mes</a></li>
+                   <li><a href="#">Ciclo</a></li>
 
-                    </ul>
-                  </li>
+                 </ul>
+               </li>
+               <li><a href="<?php echo base_url();?>Dashboard"><i class="fa fa-home"></i> Informes</a></li>
+               <li><a href="<?php echo base_url();?>Dashboard"><i class="fa fa-home"></i> Cerrar Sesion</a></li>     
+             </ul>
+           </div>
+         </div>
+<?php elseif($user=="admin"):?>
+<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+           <div class="menu_section">
+             <ul class="nav side-menu">
+             <li><a href="<?php echo base_url();?>Dashboard"><i class="fa fa-home"></i> Inicio</a></li>
+             <li><a href="<?php echo base_url();?>Dashboard"><i class="fa fa-home"></i> Control Laboratorio</a></li>
+               </li>
+               <li><a href="#"><i class="fa fa-calendar"></i> Programar Practica<span class="fa fa-chevron-down"></span></a>
+                 <ul class="nav child_menu">
+                   <li><a href="#">Dia</a></li>
+                   <li><a href="#">Mes</a></li>
+                   <li><a href="#">Ciclo</a></li>
 
-                  <li><a><i class="fa fa-cubes"></i> Productos<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="<?php echo base_url();?>productos/productos">Productos</a></li>
-                      <li><a href="<?php echo base_url();?>productos/categorias">Categorías</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-truck"></i> Compras<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="<?php echo base_url();?>compras/ingresos">Ingresos</a></li>
-                      <li><a href="<?php echo base_url();?>compras/proveedores">Proveedores</a></li>
+                 </ul>
+               </li>
+               <li><a href="#"><i class="fa fa-calendar"></i> Encargado Laboratorio<span class="fa fa-chevron-down"></span></a>
+                 <ul class="nav child_menu">
+                   <li><a href="#">Nuevos Encargados</a></li>
+                   <li><a href="#">Asignar Laboratorios</a></li>
+              
 
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-shopping-cart"></i> Ventas<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="<?php echo base_url();?>ventas/registrar">Vender</a></li>
-                        <li><a href="<?php echo base_url();?>ventas/precios">Gestion de Precios</a></li>
-                    </ul>
-                  </li>
-
-                  <li><a><i class="fa fa-bar-chart-o"></i> Informes<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">Clientes</a></li>
-                      <li><a href="#">Inventarios</a></li>
-                      <li><a href="#">Ventas</a></li>
-                      <li><a href="#">Ingresos</a></li>
-                    </ul>
-                  </li>
-
-
-                </ul>
-              </div>
+                 </ul>
+               </li>
+             
+               <li><a href="<?php echo base_url();?>Dashboard"><i class="fa fa-home"></i> Informes</a></li>
+               <li><a href="#"><i class="fa fa-calendar"></i> Configuración<span class="fa fa-chevron-down"></span></a>
+                 <ul class="nav child_menu">
+                   <li><a href="<?php echo base_url();?>admin/Edificio">Edificios</a></li>
+                   <li><a href="#">Laboratorios</a></li>
+                   <li><a href="#">Ciclo</a></li>
+                   <li><a href="#">Usuarios</a></li>
+                   <li><a href="#">Permisos</a></li>
+                 </ul>
+               </li>
+               <li><a href="<?php echo base_url();?>Dashboard"><i class="fa fa-home"></i> Cerrar Sesion</a></li>     
+             </ul>
+           </div>
+         </div>
+  <?php endif ?>;     
+    <!-- sidebar menu -->
 
 
-
-
-            </div>
-            <!-- /sidebar menu -->
-
-            <!-- /menu footer buttons -->
-
-            <!-- /menu footer buttons -->
-          </div>
-        </div>
+  </div>
+</div>

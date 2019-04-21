@@ -24,35 +24,38 @@
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-users"></i></div>
                   <div class="count">0</div>
-                  <h3>Clientes</h3>
-                 <p> <a href="" class="small-box-footer">Ver Clientes <i class="fa fa-arrow-circle-right"></i></a></p>
+                  <h3>Usuarios</h3>
+                 <p> <a href="" class="small-box-footer">Ver Usuarios <i class="fa fa-arrow-circle-right"></i></a></p>
 
                 </div>
               </div>
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-cubes"></i></div>
+                  <div class="icon"><i class="fa fa-users"></i></div>
                   <div class="count">0</div>
-                  <h3>Productos</h3>
-                  <p> <a href="" class="small-box-footer">Ver Productos <i class="fa fa-arrow-circle-right"></i></a></p>
+                  <h3>Usuarios</h3>
+                 <p> <a href="" class="small-box-footer">Ver Usuarios <i class="fa fa-arrow-circle-right"></i></a></p>
+
                 </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              </div>              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-list-alt"></i></div>
+                  <div class="icon"><i class="fa fa-users"></i></div>
                   <div class="count">0</div>
-                  <h3>Inventario</h3>
-                  <p> <a href="" class="small-box-footer">Ver Inventario <i class="fa fa-arrow-circle-right"></i></a></p>
+                  <h3>Usuarios</h3>
+                 <p> <a href="" class="small-box-footer">Ver Usuarios <i class="fa fa-arrow-circle-right"></i></a></p>
+
                 </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              </div>              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-pie-chart"></i></div>
+                  <div class="icon"><i class="fa fa-users"></i></div>
                   <div class="count">0</div>
-                  <h3>Ventas</h3>
-                  <p> <a href="" class="small-box-footer">Ver Ventas <i class="fa fa-arrow-circle-right"></i></a></p>
+                  <h3>Usuarios</h3>
+                 <p> <a href="" class="small-box-footer">Ver Usuarios <i class="fa fa-arrow-circle-right"></i></a></p>
+
                 </div>
               </div>
+
+
             </div>
 
                       <?php 
@@ -76,11 +79,4 @@
         </div>
         <!-- /page content -->
 
-        <script type="text/javascript">
-
-function abrirVentana(nickj)
-{ 
-window.open("dashboard.php?var="+nickj,"nuevaVen tana","width=600, height=200")
-}
-
-</script>
+    
