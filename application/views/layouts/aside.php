@@ -53,7 +53,7 @@
                </li>
                <li><a href="#"><i class="fa fa-calendar"></i> Encargado Laboratorio<span class="fa fa-chevron-down"></span></a>
                  <ul class="nav child_menu">
-                   <li><a href="#">Nuevos Encargados</a></li>
+                 <li><a href="<?php echo base_url();?>admin/EncargadoLaboratorio">Nuevos Encargados</a></li>
                    <li><a href="#">Asignar Laboratorios</a></li>
               
 
@@ -66,7 +66,7 @@
                    <li><a href="<?php echo base_url();?>admin/Edificio">Edificios</a></li>
                    <li><a href="#">Laboratorios</a></li>
                    <li><a href="#">Ciclo</a></li>
-                   <li><a href="#">Usuarios</a></li>
+                   <li><a href="<?php echo base_url();?>admin/Usuario">Usuarios</a></li>
                    <li><a href="#">Permisos</a></li>
                  </ul>
                </li>
