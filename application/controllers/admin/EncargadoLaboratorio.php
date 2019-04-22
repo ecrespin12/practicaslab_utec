@@ -20,7 +20,7 @@ class EncargadoLaboratorio extends CI_Controller {
 		$this->load->view('layouts/header');
 		$this->load->view('layouts/aside');
 		$this->load->view('layouts/nav');
-		$this->load->view('admin/usuarios');
+		$this->load->view('admin/encargados');
 		$this->load->view('layouts/footer');
 	}
 }
