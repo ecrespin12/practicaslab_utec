@@ -21,7 +21,7 @@
            <div class="menu_section">
              <ul class="nav side-menu">
              <li><a href="<?php echo base_url();?>Dashboard"><i class="fa fa-home"></i> Inicio</a></li>
-             <li><a href="<?php echo base_url();?>Dashboard"><i class="fa fa-home"></i> Control Laboratorio</a></li>
+             <li><a href="<?php echo base_url();?>laboratorio/ControlLaboratorio"><i class="fa fa-home"></i> Control Laboratorio</a></li>
                </li>
                <li class="current-page"><a href="#"><i class="fa fa-calendar"></i> Programar Practica<span class="fa fa-chevron-down"></span></a>
                  <ul class="nav child_menu">

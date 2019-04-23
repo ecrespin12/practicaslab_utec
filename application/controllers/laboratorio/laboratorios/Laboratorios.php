@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class ControlLaboratorio extends CI_Controller {
+class Laboratorios extends CI_Controller {
 
 	public function __construct()
 	{
@@ -20,7 +20,7 @@ class ControlLaboratorio extends CI_Controller {
 		$this->load->view('layouts/header');
 		$this->load->view('layouts/aside');
 		$this->load->view('layouts/nav');
-		$this->load->view('laboratorio/laboratorios');
+		$this->load->view('laboratorio/Laboratorios/laboratorios');
 		$this->load->view('layouts/footer');
 	}
 }
