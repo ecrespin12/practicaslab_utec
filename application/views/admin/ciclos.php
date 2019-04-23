@@ -114,13 +114,13 @@
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
                           <label>Fecha inicio</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="fecha inicio" placeholder="Ingresar fecha inicio" required="">
+                          <input type="date" class="form-control col-md-7 col-xs-12" name="fecha inicio" placeholder="Ingresar fecha inicio" required="">
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
                           <label>Fecha fin</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="fecha fin" placeholder="Ingresar fecha fin" required="">
+                          <input type="date" class="form-control col-md-7 col-xs-12" name="fecha fin" placeholder="Ingresar fecha fin" required="">
                         </div>
                       </div>
                       
