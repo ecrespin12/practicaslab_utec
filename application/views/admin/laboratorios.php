@@ -7,7 +7,7 @@
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
           <div class="x_title">
-              <h2 class="fuentetitulo">CICLOS <small>LISTADO</small></h2>
+              <h2 class="fuentetitulo">LABORATORIOS <small>LISTADO</small></h2>
               <div class="clearfix"></div>
           </div>
           <div class="x_content">
@@ -15,7 +15,7 @@
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                
-                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-ciclo" ><span class="fa fa-plus"></span> Agregar Ciclo</button> 
+                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-laboratorio" ><span class="fa fa-plus"></span> Agregar Laboratorio</button> 
               </div>
             </div>
             <hr>
@@ -28,10 +28,10 @@
                   <thead>
                     <tr>
                       <th>#</th>
-                      <th>CODIGO</th>
-                      <th>CICLO</th>
-                      <th>FECHA INICIO</th>
-                      <th>FECHA FIN</th>
+                      <th>LABORATORIO</th>
+                      <th>EDIFICIO</th>
+                      <th>NIVEL</th>
+                      <th>ADMINISTRADOR</th>
                       <th>ESTADO</th>
                       <th><div class="botonesList">ACCIONES</div></th>
                     </tr>
@@ -40,34 +40,20 @@
                     <tbody>          
                         <tr>
                             <td>1</td>
-                            <td>001</td>
-                            <td>01-2019</td>
-                            <td>20/01/2019</td>
-                            <td>10/06/2019</td>
+                            <td>1</td>
+                            <td>Francisco morazan</td>
+                            <td>5</td>
+                            <td>Jorge Acevedo</td>
                             <td>ACTIVO</td>
                             <td>
                             <div class="botonesList">
                   
-                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-ciclo" ><span class="fa fa-pencil"></span></button> 
+                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-laboratorio" ><span class="fa fa-pencil"></span></button> 
                               <button class="btn btn-sm btn-danger" type="button"><span class="fa fa-remove"></span></button> 
                             </div>              
                             </td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>002</td>
-                            <td>02-2019</td>
-                            <td>20/08/2019</td>
-                            <td>10/12/2019</td>
-                            <td>INACTIVO</td>
-                            <td>
-                            <div class="botonesList">
-                  
-                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-ciclo" ><span class="fa fa-pencil"></span></button> 
-                              <button class="btn btn-sm btn-danger" type="button"><span class="fa fa-remove"></span></button> 
-                            </div>              
-                            </td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
@@ -86,13 +72,13 @@
 
 
         <!-- modal form -->
-        <div class="modal fade" id="modal-ciclo">
+        <div class="modal fade" id="modal-laboratorio">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">FORMULARIO DE CICLO</h4>
+                    <h4 class="modal-title">FORMULARIO DE LABORATORIO</h4>
                 </div>
                 <div class="modal-body">            
                 <form name="frm" action="" method="POST">
@@ -106,24 +92,41 @@
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>Ciclo</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="ciclo" placeholder="Ingresar ciclo" required="">
+                          <label>Laboratorio</label>
+                          <input type="text" class="form-control col-md-7 col-xs-12" name="laboratorio" placeholder="Ingresar laboratorio" required="">
                         </div>
                       </div>
 
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>Fecha inicio</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="fecha inicio" placeholder="Ingresar fecha inicio" required="">
+                          <label>Edificio</label>
+                          <input type="text" class="form-control col-md-7 col-xs-12" name="edificio" placeholder="Ingresar edificio" required="">
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>Fecha fin</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="fecha fin" placeholder="Ingresar fecha fin" required="">
+                          <label>Nivel</label>
+                          <input type="text" class="form-control col-md-7 col-xs-12" name="nivel" placeholder="Ingresar nivel" required="">
                         </div>
                       </div>
-                      
+                      <div class="form-row">
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                          <label>Administrador</label>
+                          <input type="text" class="form-control col-md-7 col-xs-12" name="administrador" placeholder="Ingresar administrador" required="">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                          <label>Maquinas(total)</label>
+                          <input type="text" class="form-control col-md-7 col-xs-12" name="maquinas" placeholder="Ingresar total de maquinas" required="">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                          <label>Nivel</label>
+                          <input type="text" class="form-control col-md-7 col-xs-12" name="nivel" placeholder="Ingresar nivel" required="">
+                        </div>
+                      </div>
 
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
