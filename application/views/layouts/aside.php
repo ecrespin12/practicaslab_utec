@@ -36,7 +36,7 @@
              <li><a href="<?php echo base_url();?>admin/Inicio"><i class="fa fa-home"></i> Inicio</a></li>
              <li><a href="<?php echo base_url();?>admin/ControlLaboratorio"><i class="fa fa-home"></i> Control Laboratorio</a></li>
               
-             <li><a href="<?php echo base_url();?>admin/ControlLaboratorio"><i class="fa fa-home"></i> Control Laboratorio</a></li>
+             <li><a href="<?php echo base_url();?>admin/ControlLaboratorio"><i class="fa fa-home"></i> Programar Practica</a></li>
               
                <li><a href="#"><i class="fa fa-calendar"></i> Encargado Laboratorio<span class="fa fa-chevron-down"></span></a>
                  <ul class="nav child_menu">
