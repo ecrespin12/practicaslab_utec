@@ -7,54 +7,47 @@
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
           <div class="x_title">
-              <h2 class="fuentetitulo">LABORATORIOS <small>LISTADO</small></h2>
+              <h2 class="fuentetitulo">CONTROL LABORATORIO 1</h2>
               <div class="clearfix"></div>
           </div>
-          <div class="x_content">
-            
-            <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="x_content" style="text-align: center;">
+            <center>
+        <?php $n=1; ?>
+          <?php foreach(range(1,8) as $i):?>
+            <?php foreach(range(1,5) as $x):?>
+              <div class="form-row">
+                      <div class="form-group col-md-1 col-sm-1 col-xs-1">
+                        <div class="">
+                          <center><div class=""> <img src="https://pngimage.net/wp-content/uploads/2018/06/icone-informatique-png-1.png" alt="" width="40" height="40"></div></center>                
+                          <center><h4><a href="#">PCz-<?php echo $n++;?></a></h4></center>
+                        </div>
+                      </div>              
+              </div>
+             <?php endforeach;?>
+             <div class="form-row">
+                      <div class="form-group col-md-1 col-sm-1 col-xs-1">
+                        <div class="">
+                          <center><div class=""> <img src="" alt="" width="10" height="10"></div>             
                
-                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-edificio" ><span class="fa fa-plus"></span> Agregar LABORATORIO</button> 
+                        </div>
+                      </div>              
               </div>
-            </div>
-            <hr>
-
-            <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="table-responsive">
-                <table class="table table-striped table-hover"  id="tabla" >
-
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>NOMBRE</th>
-                      <th>EDIFICIO</th>
-                      <th><div class="botonesList">ACCIONES</div></th>
-                    </tr>
-                  </thead>
-              
-                    <tbody>          
-                        <tr>
-                            <td>1</td>
-                            <td><a href="<?php echo base_url();?>laboratorio/laboratorios/Laboratorios"> LAB-01</a></td>
-                            <td>FRANCISCO MORAZAN</td>
-                            <td>
-                            <div class="botonesList">
-                  
-                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-edificio" ><span class="fa fa-pencil"></span></button> 
-                              <button class="btn btn-sm btn-danger" type="button"><span class="fa fa-remove"></span></button> 
-                            </div>              
-                            </td>
-                        </tr>
-                 
-                    </tbody>
-                </table>
-            </div>
+             <?php foreach(range(1,4) as $x):?>
+              <div class="form-row">
+                      <div class="form-group col-md-1 col-sm-1 col-xs-1">
+                        <div class="">
+                          <center><div class=""> <img src="https://pngimage.net/wp-content/uploads/2018/06/icone-informatique-png-1.png" alt="" width="40" height="40"></div></center>                
+                          <center><h4><a href="#">PC-<?php echo $n++;?></a></h4></center>
+                        </div>
+                      </div>              
               </div>
-
-            </div>
-
+             <?php endforeach;?>
+             <div class="form-row">
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        </div>
+                      </div>
+          <?php endforeach;?>
+            </center>
           </div>
         </div>
       </div>
@@ -65,62 +58,5 @@
 <!-- /page content -->
 
 
-        <!-- modal form -->
-        <div class="modal fade" id="modal-edificio">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">FORMULARIO DE LABORATORIO</h4>
-                </div>
-                <div class="modal-body">            
-                <form name="frm" action="" method="POST">
-                      <div class="form-row">
-
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                          <label>Codigo</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="codigo" placeholder="Ingresar Codigo" required="">
-                        </div>
-
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>Nombre</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="nombre" placeholder="Ingresar Nombre" required="">
-                        </div>
-                      </div>
-
-                      <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>EDIFICIO</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="descripcion" placeholder="Ingresar Descripcion" required="">
-                        </div>
-                      </div>
-
-
-                      <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            <div class="ln_solid"></div>
-                        </div>
-                      </div>
-
-                      <div class="form-row">
-                          <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            <button type="submit" class="btn btn-primary">Guardar</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                           
-                            
-                          </div>
-                      </div>
-                    </form>                                     
-                </div>
-
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-
+      
 

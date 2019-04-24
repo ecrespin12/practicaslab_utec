@@ -37,7 +37,14 @@ class Auth extends CI_Controller
 				'login' => $login
 			);
 			$this->session->set_userdata($data);
-			redirect(base_url() . "Dashboard");
+			$user=  $this->session->userdata("usuario");
+			if($user=="estudiante")
+				redirect(base_url() . "estudiante/Inicio");
+			else if($user=="admin")
+			redirect(base_url() . "admin/Inicio");
+			else if($user=="lab")
+			redirect(base_url() . "laboratorio/Inicio");
+			
 		}
 		else
 			redirect(base_url());

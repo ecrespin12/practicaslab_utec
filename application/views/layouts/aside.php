@@ -51,10 +51,10 @@
                <li><a href="#"><i class="fa fa-calendar"></i> Configuración<span class="fa fa-chevron-down"></span></a>
                  <ul class="nav child_menu">
                    <li><a href="<?php echo base_url();?>admin/Edificio">Edificios</a></li>
-                   <li><a href="<?php echo base_url();?>admin/Laboratorios">Laboratorios</a></li>
+                   <li><a href="<?php echo base_url();?>admin/Laboratorio">Laboratorios</a></li>
                    <li><a href="<?php echo base_url();?>admin/Ciclo">Ciclo</a></li>
-                   <li><a href="<?php echo base_url();?>admin/Usuarios">Usuarios</a></li>
-                   <li><a href="<?php echo base_url();?>admin">Permisos</a></li>
+                   <li><a href="<?php echo base_url();?>admin/Usuario">Usuarios</a></li>
+        
                  </ul>
                </li>
                <li><a href="<?php echo base_url();?>Dashboard"><i class="fa fa-home"></i> Cerrar Sesion</a></li>     
