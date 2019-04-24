@@ -15,7 +15,7 @@
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                
-                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-edificio" ><span class="fa fa-plus"></span> Agregar Usuario</button> 
+                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-usuario" ><span class="fa fa-plus"></span> Agregar Usuario</button> 
               </div>
             </div>
             <hr>
@@ -28,13 +28,10 @@
                   <thead>
                     <tr>
                       <th>#</th>
-                      <th>NOMBRE</th>
-                      <th>APELLIDO</th>
+                      <th>Nombres</th>
+                      <th>APELLIDOS</th>
                       <th>CORREO</th>
-                      <th>TIPO</th>
-                      <th>TELEFONO</th>
-                      <th>CELULAR</th>
-                      
+                      <th>SEXO</th>                    
                       <th><div class="botonesList">ACCIONES</div></th>
                     </tr>
                   </thead>
@@ -45,14 +42,14 @@
                             <td>Jorge Alberto</td>
                             <td>Acevedo</td>
                             <td>jorge.acevedo@mail.utec.edu.sv</td>
-                            <td>Super Administrador</td>
-                            <td>2250-4444</td>
-                            <td>7512-4589</td>
+                            <td>MASCULINO</td>
+    
                             
                             <td>
                             <div class="botonesList">
                   
-                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-edificio-editar" ><span class="fa fa-pencil"></span></button> 
+                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-usuario-editar" ><span class="fa fa-pencil"></span></button> 
+                              <button class="btn btn-sm btn-info" type="button"><span class="fa fa-key"></span></button> 
                               <button class="btn btn-sm btn-danger" type="button"><span class="fa fa-remove"></span></button> 
                             </div>              
                             </td>
@@ -63,14 +60,14 @@
                             <td>Carlos Alberto</td>
                             <td>Sanchez</td>
                             <td>carlos.sanchez@mail.utec.edu.sv</td>
-                            <td>Administrador</td>
-                            <td>2250-4444</td>
-                            <td>7512-2525</td>
+                            <td>MASCULINO</td>
+            
                             
                             <td>
                             <div class="botonesList">
                   
-                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-edificio-editar" ><span class="fa fa-pencil"></span></button> 
+                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-usuario-editar" ><span class="fa fa-pencil"></span></button> 
+                              <button class="btn btn-sm btn-info" type="button"><span class="fa fa-key"></span></button> 
                               <button class="btn btn-sm btn-danger" type="button"><span class="fa fa-remove"></span></button> 
                             </div>              
                             </td>
@@ -81,14 +78,12 @@
                             <td>Jorge Alonso</td>
                             <td>Rodriguez</td>
                             <td>jorge.rodriguez@mail.utec.edu.sv</td>
-                            <td>Administrador</td>
-                            <td>2250-4444</td>
-                            <td>6412-4589</td>
-                            
+                            <td>MASCULINO</td>                   
                             <td>
                             <div class="botonesList">
                   
-                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-edificio-editar" ><span class="fa fa-pencil"></span></button> 
+                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-usuario-editar" ><span class="fa fa-pencil"></span></button>  
+                              <button class="btn btn-sm btn-info" type="button"><span class="fa fa-key"></span></button> 
                               <button class="btn btn-sm btn-danger" type="button"><span class="fa fa-remove"></span></button> 
                             </div>              
                             </td>
@@ -112,7 +107,7 @@
 
 
         <!-- modal form -->
-        <div class="modal fade" id="modal-edificio">
+        <div class="modal fade" id="modal-usuario">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -124,62 +119,68 @@
                 <form name="frm" action="" method="POST">
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>NOMBRE</label>
+                          <label>Nombres</label>
                           <input type="text" class="form-control col-md-7 col-xs-12" name="nombre" placeholder="Ingresar Nombre" required="">
                         </div>
 
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>APELLIDOS</label>
+                          <label>Apellidos</label>
                           <input type="text" class="form-control col-md-7 col-xs-12" name="apellidos" placeholder="Ingresar Apellidos" required="">
                         </div>
                       </div>
 
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>CORREO</label>
+                          <label>Correo</label>
                           <input type="text" class="form-control col-md-7 col-xs-12" name="correo" placeholder="Ingresar Correo" required="">
                         </div>
                       </div>
 
                       <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>TIPO DE USUARIO</label><br>
-                          <input type="radio" name="tipousuario" value="SuperAdmin" checked> Super Administrador<br>
-                          <input type="radio" name="tipousuario" value="Admin"> Administrador<br>
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                          <label>Fecha de Nacimiento</label><br>
+                          <input type="date" class="form-control col-md-7 col-xs-12" name="txtFechaNacimiento" placeholder="Ingresar Fecha Nacimiento" required="">
                           
                         </div>
-                      </div>
-
-                      <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>TELEFONO</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="telefono" placeholder="Ingresar Telefono" required="">
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                          <label>Sexo</label><br>
+                          <select class="form-control" name="sexo">
+                                <option value="bj">Seleccione Sexo</option>
+                                <option value="bj">FEMENINO</option>
+                                <option value="fm">MASCULINO</option>
+                              
+                            </select>
                         </div>
                       </div>
 
                       <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>CELULAR</label>
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                          <label>DUI</label>
+                          <input type="text" class="form-control col-md-7 col-xs-12" name="telefono" placeholder="Ingresar DUI" required="">
+                        </div>
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                          <label>Celular</label>
                           <input type="text" class="form-control col-md-7 col-xs-12" name="celular" placeholder="Ingresar Celular" required="">
                         </div>
                       </div>
+                      <div class="form-row">
+                      <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                      
+                      <label>Fotografía</label>
+                          <input name="foto" class="form-control col-md-6 col-xs-12" accept="image/*" type="file" capturar/>
+                    </div>
+
+                      </div>
 
                       
-
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
                           <label>Estado </label><br/>
                           <label>
                             <input type="checkbox" class="js-switch" checked name="estado" /> Activo
                           </label>
-                        </div>
-                      </div>
-
-                      <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            <div class="ln_solid"></div>
                         </div>
                       </div>
 
@@ -202,7 +203,7 @@
     <!-- /.modal -->
 
         <!-- modal form -->
-        <div class="modal fade" id="modal-edificio-editar">
+        <div class="modal fade" id="modal-usuario-editar">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -214,70 +215,68 @@
                 <form name="frm" action="" method="POST">
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>NOMBRE</label>
+                          <label>Nombres</label>
                           <input type="text" class="form-control col-md-7 col-xs-12" name="nombre" placeholder="Ingresar Nombre" required="">
                         </div>
 
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>APELLIDOS</label>
+                          <label>Apellidos</label>
                           <input type="text" class="form-control col-md-7 col-xs-12" name="apellidos" placeholder="Ingresar Apellidos" required="">
                         </div>
                       </div>
 
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>CORREO</label>
+                          <label>Correo</label>
                           <input type="text" class="form-control col-md-7 col-xs-12" name="correo" placeholder="Ingresar Correo" required="">
                         </div>
                       </div>
 
                       <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>TIPO DE USUARIO</label><br>
-                          <input type="radio" name="tipousuario" value="SuperAdmin" checked> Super Administrador<br>
-                          <input type="radio" name="tipousuario" value="Admin"> Administrador<br>
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                          <label>Fecha de Nacimiento</label><br>
+                          <input type="date" class="form-control col-md-7 col-xs-12" name="txtFechaNacimiento" placeholder="Ingresar Fecha Nacimiento" required="">
                           
                         </div>
-                      </div>
-
-                      <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>TELEFONO</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="telefono" placeholder="Ingresar Telefono" required="">
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                          <label>Sexo</label><br>
+                          <select class="form-control" name="sexo">
+                                <option value="bj">Seleccione Sexo</option>
+                                <option value="bj">FEMENINO</option>
+                                <option value="fm">MASCULINO</option>
+                              
+                            </select>
                         </div>
                       </div>
 
                       <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>CELULAR</label>
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                          <label>DUI</label>
+                          <input type="text" class="form-control col-md-7 col-xs-12" name="telefono" placeholder="Ingresar DUI" required="">
+                        </div>
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                          <label>Celular</label>
                           <input type="text" class="form-control col-md-7 col-xs-12" name="celular" placeholder="Ingresar Celular" required="">
                         </div>
                       </div>
-
                       <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>CAMBIAR CONTRASEÑA</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="celular" placeholder="Ingresar Contraseña nueva" required="">
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="celular" placeholder="Confirme Contraseña " required="">
-                        </div>
+                      <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                      
+                      <label>Fotografía</label>
+                          <input name="foto" class="form-control col-md-6 col-xs-12" accept="image/*" type="file" capturar/>
+                    </div>
+
                       </div>
 
                       
-
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
                           <label>Estado </label><br/>
                           <label>
                             <input type="checkbox" class="js-switch" checked name="estado" /> Activo
                           </label>
-                        </div>
-                      </div>
-
-                      <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            <div class="ln_solid"></div>
                         </div>
                       </div>
 
@@ -289,7 +288,7 @@
                             
                           </div>
                       </div>
-                    </form>                                     
+                    </form>                                
                 </div>
 
             </div>

@@ -23,4 +23,13 @@ class EncargadoLaboratorio extends CI_Controller {
 		$this->load->view('admin/encargados');
 		$this->load->view('layouts/footer');
 	}
+
+	public function indexAsignarLab()
+	{
+		$this->load->view('layouts/header');
+		$this->load->view('layouts/aside');
+		$this->load->view('layouts/nav');
+		$this->load->view('admin/asignar_laboratorios');
+		$this->load->view('layouts/footer');
+	}
 }

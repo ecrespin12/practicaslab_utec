@@ -31,7 +31,7 @@
                       <th>LABORATORIO</th>
                       <th>EDIFICIO</th>
                       <th>NIVEL</th>
-                      <th>ADMINISTRADOR</th>
+                      <th>MAQUINAS</th>
                       <th>ESTADO</th>
                       <th><div class="botonesList">ACCIONES</div></th>
                     </tr>
@@ -41,15 +41,16 @@
                         <tr>
                             <td>1</td>
                             <td>1</td>
-                            <td>Francisco morazan</td>
+                            <td>Francisco Morazan</td>
                             <td>5</td>
-                            <td>Jorge Acevedo</td>
+                            <td>80</td>
                             <td>ACTIVO</td>
                             <td>
                             <div class="botonesList">
                   
                               <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-laboratorio" ><span class="fa fa-pencil"></span></button> 
                               <button class="btn btn-sm btn-danger" type="button"><span class="fa fa-remove"></span></button> 
+                              <button class="btn btn-sm btn-info" type="button"><span class="fa fa-eye"></span></button> 
                             </div>              
                             </td>
                         </tr>
@@ -103,52 +104,52 @@
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
                           <label>Edificio</label>
                           <select class="form-control" name="edificio">
-                                <option value="bj">Seleccione edificio</option>
-                                <option value="bj">benito juarez</option>
+                                <option value="bj">Seleccionar ...</option>
+                                <option value="bj">Benito Juarez</option>
                                 <option value="fm">francisco morazan</option>
                                 <option value="sb">simon bolivar</option>
                             </select>
                         </div>
                       </div>
                       <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
                           <label>Nivel</label>
                           <input type="number" class="form-control col-md-7 col-xs-12" name="nivel" placeholder="Ingresar nivel" required="">
                         </div>
                       </div>
+
                       <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>Administrador</label>
-                          <select class="form-control" name="administrador">
-                                <option value="0">Seleccione administrador</option>
-                                <option value="1">administrador 1</option>
-                                <option value="2">administrador 2</option>
-                                <option value="3">administrador 3</option>
-                            </select>
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
                           <label>Maquinas(total)</label>
                           <input type="number" class="form-control col-md-7 col-xs-12" name="maquinas" placeholder="Ingresar total de maquinas" required="">
                         </div>
                       </div>
-
                       <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>Estado </label><br/>
-                          <label>
-                            <input type="checkbox" class="js-switch" checked name="estado" /> Activo
-                          </label>
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                          <label>Latitud (Ubicacion en Mapa)</label>
+                          <input type="text" class="form-control col-md-7 col-xs-12" name="maquinas" placeholder="Ingresar Latitud" required="">
+                        </div>
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                          <label>Longitud (Ubicacion en Mapa)</label>
+                          <input type="text" class="form-control col-md-7 col-xs-12" name="maquinas" placeholder="Ingresar Longitud" required="">
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                       
+                          <center><label style="color:#5d0a28 ;"> MATRIZ DE LABORATORIO </label></center>
+                        </div>
+                        
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                          <label>Filas</label>
+                          <input type="number" class="form-control col-md-7 col-xs-12" name="maquinas" placeholder="Ingresar Numero de Filas" required="">
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                          <label>Columnas</label>
+                          <input type="number" class="form-control col-md-7 col-xs-12" name="maquinas" placeholder="Ingresar Numero de Columnas" required="">
                         </div>
                       </div>
 
-                      <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            <div class="ln_solid"></div>
-                        </div>
-                      </div>
-
+    
                       <div class="form-row">
                           <div class="form-group col-md-12 col-sm-12 col-xs-12">
                             <button type="submit" class="btn btn-primary">Guardar</button>
