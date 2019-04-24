@@ -61,7 +61,7 @@
              </ul>
            </div>
          </div>
-  <?php endif ?>;     
+  <?php endif ;?>  
     <!-- sidebar menu -->
 
 
