@@ -27,9 +27,11 @@
 
                   <thead>
                     <tr>
-                      <th>#</th>
                       <th>CODIGO</th>
                       <th>NOMBRE</th>
+                      <th>NOMBRE CORTO</th>
+                      <th>ESTADO</th>
+                      
                       <th><div class="botonesList">ACCIONES</div></th>
                     </tr>
                   </thead>
@@ -37,8 +39,10 @@
                     <tbody>          
                         <tr>
                             <td>1</td>
-                            <td>BJ</td>
                             <td>BENITO JUAREZ</td>
+                            <td>BJ</td>
+                            <td>ACTIVO</td>
+                            
                             <td>
                             <div class="botonesList">
                   
