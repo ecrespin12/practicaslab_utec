@@ -93,38 +93,44 @@
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
                           <label>Laboratorio</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="laboratorio" placeholder="Ingresar laboratorio" required="">
+                          <input type="number" class="form-control col-md-7 col-xs-12" name="laboratorio" placeholder="Ingresar laboratorio" required="">
+                            
                         </div>
                       </div>
+
 
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
                           <label>Edificio</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="edificio" placeholder="Ingresar edificio" required="">
+                          <select class="form-control" name="edificio">
+                                <option value="bj">Seleccione edificio</option>
+                                <option value="bj">benito juarez</option>
+                                <option value="fm">francisco morazan</option>
+                                <option value="sb">simon bolivar</option>
+                            </select>
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
                           <label>Nivel</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="nivel" placeholder="Ingresar nivel" required="">
+                          <input type="number" class="form-control col-md-7 col-xs-12" name="nivel" placeholder="Ingresar nivel" required="">
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
                           <label>Administrador</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="administrador" placeholder="Ingresar administrador" required="">
+                          <select class="form-control" name="administrador">
+                                <option value="0">Seleccione administrador</option>
+                                <option value="1">administrador 1</option>
+                                <option value="2">administrador 2</option>
+                                <option value="3">administrador 3</option>
+                            </select>
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
                           <label>Maquinas(total)</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="maquinas" placeholder="Ingresar total de maquinas" required="">
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>Nivel</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="nivel" placeholder="Ingresar nivel" required="">
+                          <input type="number" class="form-control col-md-7 col-xs-12" name="maquinas" placeholder="Ingresar total de maquinas" required="">
                         </div>
                       </div>
 
