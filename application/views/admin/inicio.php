@@ -3,7 +3,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3 class="fuentetitulo">DASHBOARD</h3>
+                <h3 class="fuentetitulo">INICIO</h3>
               </div>
 
 
@@ -25,7 +25,7 @@
                   <div class="icon"><i class="fa fa-users"></i></div>
                   <div class="count">0</div>
                   <h3>Usuarios</h3>
-                 <p> <a href="" class="small-box-footer">Ver Usuarios <i class="fa fa-arrow-circle-right"></i></a></p>
+                 <p> <a href="" class="small-box-footer">Ver Practicas <i class="fa fa-arrow-circle-right"></i></a></p>
 
                 </div>
               </div>
@@ -34,7 +34,7 @@
                   <div class="icon"><i class="fa fa-users"></i></div>
                   <div class="count">0</div>
                   <h3>Usuarios</h3>
-                 <p> <a href="" class="small-box-footer">Ver Usuarios <i class="fa fa-arrow-circle-right"></i></a></p>
+                 <p> <a href="" class="small-box-footer">Ver Practicas <i class="fa fa-arrow-circle-right"></i></a></p>
 
                 </div>
               </div>              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -42,7 +42,7 @@
                   <div class="icon"><i class="fa fa-users"></i></div>
                   <div class="count">0</div>
                   <h3>Usuarios</h3>
-                 <p> <a href="" class="small-box-footer">Ver Usuarios <i class="fa fa-arrow-circle-right"></i></a></p>
+                 <p> <a href="" class="small-box-footer">Ver Practicas <i class="fa fa-arrow-circle-right"></i></a></p>
 
                 </div>
               </div>              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -50,7 +50,7 @@
                   <div class="icon"><i class="fa fa-users"></i></div>
                   <div class="count">0</div>
                   <h3>Usuarios</h3>
-                 <p> <a href="" class="small-box-footer">Ver Usuarios <i class="fa fa-arrow-circle-right"></i></a></p>
+                 <p> <a href="" class="small-box-footer">Ver Practicas <i class="fa fa-arrow-circle-right"></i></a></p>
 
                 </div>
               </div>
@@ -79,4 +79,9 @@
         </div>
         <!-- /page content -->
 
+        <!-- TODO: 
+                  Interfaz de inicio: 
+                 +Agregar un listado de admin consolidado de usuarios, admin de lab, etc 
+                 +Falta implementar alertas
+                 -->
     

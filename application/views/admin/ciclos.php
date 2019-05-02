@@ -7,7 +7,7 @@
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
           <div class="x_title">
-              <h2 class="fuentetitulo">EDIFICIOS <small>LISTADO</small></h2>
+              <h2 class="fuentetitulo">CICLOS <small>LISTADO</small></h2>
               <div class="clearfix"></div>
           </div>
           <div class="x_content">
@@ -15,7 +15,7 @@
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                
-                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-edificio" ><span class="fa fa-plus"></span> Agregar Edificio</button> 
+                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-ciclo" ><span class="fa fa-plus"></span> Agregar Ciclo</button> 
               </div>
             </div>
             <hr>
@@ -29,7 +29,10 @@
                     <tr>
                       <th>#</th>
                       <th>CODIGO</th>
-                      <th>NOMBRE</th>
+                      <th>CICLO</th>
+                      <th>FECHA INICIO</th>
+                      <th>FECHA FIN</th>
+                      <th>ESTADO</th>
                       <th><div class="botonesList">ACCIONES</div></th>
                     </tr>
                   </thead>
@@ -37,29 +40,34 @@
                     <tbody>          
                         <tr>
                             <td>1</td>
-                            <td>BJ</td>
-                            <td>BENITO JUAREZ</td>
+                            <td>001</td>
+                            <td>01-2019</td>
+                            <td>20/01/2019</td>
+                            <td>10/06/2019</td>
+                            <td>ACTIVO</td>
                             <td>
                             <div class="botonesList">
                   
-                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-edificio" ><span class="fa fa-pencil"></span></button> 
+                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-ciclo" ><span class="fa fa-pencil"></span></button> 
                               <button class="btn btn-sm btn-danger" type="button"><span class="fa fa-remove"></span></button> 
                             </div>              
                             </td>
                         </tr>
                         <tr>
-                            <td>1</td>
-                            <td>FM</td>
-                            <td>FRANCISCO MORAZAN</td>
+                            <td>2</td>
+                            <td>002</td>
+                            <td>02-2019</td>
+                            <td>20/08/2019</td>
+                            <td>10/12/2019</td>
+                            <td>INACTIVO</td>
                             <td>
                             <div class="botonesList">
                   
-                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-edificio" ><span class="fa fa-pencil"></span></button> 
+                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-ciclo" ><span class="fa fa-pencil"></span></button> 
                               <button class="btn btn-sm btn-danger" type="button"><span class="fa fa-remove"></span></button> 
                             </div>              
                             </td>
                         </tr>
-                 
                     </tbody>
                 </table>
             </div>
@@ -78,13 +86,13 @@
 
 
         <!-- modal form -->
-        <div class="modal fade" id="modal-edificio">
+        <div class="modal fade" id="modal-ciclo">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">FORMULARIO DE EDIFICIO</h4>
+                    <h4 class="modal-title">FORMULARIO DE CICLO</h4>
                 </div>
                 <div class="modal-body">            
                 <form name="frm" action="" method="POST">
@@ -98,17 +106,24 @@
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>Nombre</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="nombre" placeholder="Ingresar Nombre" required="">
+                          <label>Ciclo</label>
+                          <input type="text" class="form-control col-md-7 col-xs-12" name="ciclo" placeholder="Ingresar ciclo" required="">
                         </div>
                       </div>
 
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>Descripcion</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="descripcion" placeholder="Ingresar Descripcion" required="">
+                          <label>Fecha inicio</label>
+                          <input type="date" class="form-control col-md-7 col-xs-12" name="fecha inicio" placeholder="Ingresar fecha inicio" required="">
                         </div>
                       </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                          <label>Fecha fin</label>
+                          <input type="date" class="form-control col-md-7 col-xs-12" name="fecha fin" placeholder="Ingresar fecha fin" required="">
+                        </div>
+                      </div>
+                      
 
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">

@@ -1,4 +1,5 @@
 <?php
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class ControlLaboratorio extends CI_Controller
@@ -119,3 +120,4 @@ class ControlLaboratorio extends CI_Controller
 		echo json_encode($ret);
 	}
 }
+
