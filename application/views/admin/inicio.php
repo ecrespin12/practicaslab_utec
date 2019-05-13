@@ -54,7 +54,7 @@
 
                 </div>
               </div>
-
+              prueba a servidor
 
             </div>
 
@@ -78,7 +78,7 @@
           </div>
         </div>
         <!-- /page content -->
-
+      
         <!-- TODO: 
                   Interfaz de inicio: 
                  +Agregar un listado de admin consolidado de usuarios, admin de lab, etc 
