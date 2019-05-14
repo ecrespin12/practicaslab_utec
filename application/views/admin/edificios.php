@@ -34,31 +34,9 @@
                     </tr>
                   </thead>
               
-                    <tbody>          
-                        <tr>
-                            <td>1</td>
-                            <td>BJ</td>
-                            <td>BENITO JUAREZ</td>
-                            <td>
-                            <div class="botonesList">
-                  
-                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-edificio" ><span class="fa fa-pencil"></span></button> 
-                              <button class="btn btn-sm btn-danger" type="button"><span class="fa fa-remove"></span></button> 
-                            </div>              
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>FM</td>
-                            <td>FRANCISCO MORAZAN</td>
-                            <td>
-                            <div class="botonesList">
-                  
-                              <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-edificio" ><span class="fa fa-pencil"></span></button> 
-                              <button class="btn btn-sm btn-danger" type="button"><span class="fa fa-remove"></span></button> 
-                            </div>              
-                            </td>
-                        </tr>
+                    <tbody id="resp">          
+      
+   
                  
                     </tbody>
                 </table>
@@ -87,26 +65,26 @@
                     <h4 class="modal-title">FORMULARIO DE EDIFICIO</h4>
                 </div>
                 <div class="modal-body">            
-                <form name="frm" action="" method="POST">
+                <form id='frm_edificio' name="frm" action="" method="POST">
                       <div class="form-row">
 
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
                           <label>Codigo</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="codigo" placeholder="Ingresar Codigo" required="">
+                          <input type="text" class="form-control col-md-7 col-xs-12" id="txtCodigo" name="txtCodigo" placeholder="Ingresar Codigo" required="">
                         </div>
 
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
                           <label>Nombre</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="nombre" placeholder="Ingresar Nombre" required="">
+                          <input type="text" class="form-control col-md-7 col-xs-12" id="txtNombre" name="txtNombre" placeholder="Ingresar Nombre" required="">
                         </div>
                       </div>
 
                       <div class="form-row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                          <label>Descripcion</label>
-                          <input type="text" class="form-control col-md-7 col-xs-12" name="descripcion" placeholder="Ingresar Descripcion" required="">
+                          <label>Acronimo</label>
+                          <input type="text" class="form-control col-md-7 col-xs-12" id="txtAcronimo"  name="txtAcronimo" placeholder="Ingresar Acronimo" required="">
                         </div>
                       </div>
 
@@ -127,7 +105,8 @@
 
                       <div class="form-row">
                           <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            <button type="submit" class="btn btn-primary">Guardar</button>
+                            
+                            <input type="submit" name="guardar" id="guardar" value="Guardar" class="btn btn-primary">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                            
                             
@@ -144,3 +123,4 @@
     <!-- /.modal -->
 
 
+    <script src="<?php echo base_url();?>assets/build/ajaxList/edificio.js"></script>

@@ -24,7 +24,7 @@
       
 
       
-          <form action="<?php echo base_url(); ?>auth/login" method="post"  class="" data-type-form="login" autocomplete="off">
+          <form action="<?php echo base_url(); ?>Auth/login" method="post"  class="" data-type-form="login" autocomplete="off">
     
             <div class="or-seperator"><i></i></div>
             <div class="form-row">

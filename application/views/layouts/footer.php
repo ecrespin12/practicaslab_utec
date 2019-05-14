@@ -86,6 +86,46 @@
   </script>
 
 
+<script>  
+
+$('#frm_edificio').on("submit", function(event){  
+  event.preventDefault();  
+  if($('#txtCodigo').val() == "")    
+    alert("Facultad es requerida");  
+  
+  else if($('#txtNombre').val() == "")   
+    alert("Escuela es requerida");  
+  
+  else if($('#txtAcronimo').val() == "") 
+    alert("Codigo de seminario es requerido"); 
+  
+ 
+else  
+{  
+  $.ajax({  
+    url:"<?php echo base_url();?>apis/admin/Edificio_api/insertEdificio",  
+    method:"POST",  
+    data:$('#frm_edificio').serialize(),  
+    beforeSend:function(){  
+      $('#guardar').val("Guardando...");  
+     }, 
+
+     success:function(data){  
+      $('#frm_edificio')[0].reset(); 
+   
+      $('#modal-edificio').modal('hide'); 
+      // $('#tabla_seminario').html(data); 
+   
+    }  
+  });  
+}  
+});
+
+
+
+</script>
+
+
 <script src="<?php echo base_url();?>assets/build/js/custom.min.js"></script>
   </body>
 </html>
