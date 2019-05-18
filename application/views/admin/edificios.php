@@ -30,7 +30,7 @@
                       <th>#</th>
                       <th>CODIGO</th>
                       <th>NOMBRE</th>
-                      <th><div class="botonesList">ACCIONES</div></th>
+                      <th><div class="botonesList">ACCION</div></th>
                     </tr>
                   </thead>
               

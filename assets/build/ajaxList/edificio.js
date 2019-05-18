@@ -27,8 +27,8 @@ function getSeminarios() {
                 <td>
                 <div class="botonesList">
       
-                  <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-edificio" ><span class="fa fa-pencil"></span></button> 
-                  <button class="btn btn-sm btn-danger" type="button"><span class="fa fa-remove"></span></button> 
+                  <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modal-edificio" >Editar <span class="fa fa-pencil"></span></button> 
+                  <button class="btn btn-sm btn-danger" type="button">Eliminar <span class="fa fa-remove"></span></button> 
                 </div>              
                 </td>
             </tr>

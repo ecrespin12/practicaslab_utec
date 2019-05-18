@@ -7,13 +7,10 @@ class Edificio extends CI_Controller {
 	{
 			parent::__construct();
 			//verificar la session de usuario
-				//verificar la session de usuario
 			if(!$this->session->userdata("login")){
 					redirect(base_url());
 			}
-
 		}
-
 
 	public function index()
 	{
