@@ -21,7 +21,7 @@ class EdificioModel extends CI_Model {
         
     // }
     public function guardarDatos($id, $data){
-        if (empty($id) && $id > 0) {
+        if (!empty($id) && $id > 0) {
             $stored_procedure = "CALL proc_crud_edificio(3,?,?,?,?)";
         }else {
             $stored_procedure = "CALL proc_crud_edificio(2,?,?,?,?)";

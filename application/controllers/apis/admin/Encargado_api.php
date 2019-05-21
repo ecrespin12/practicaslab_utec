@@ -48,7 +48,7 @@ class Encargado_api extends REST_Controller
     function borrarDatos_delete()
     {
         //recibir los names de input desde la vista por post
-        $codigo = $this->input->post("txtCodigo");
+        $codigo = $this->input->delete("txtCodigo");
 
         //mandar los input a arreglo y campos de la bd
         $data = array(

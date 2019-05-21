@@ -31,7 +31,7 @@ class Laboratorio_api extends REST_Controller
             'codedf' => $edificio_fil,
             'acr' => $acronimo_fil,
             'fil' => $filas_fil,
-            'col' => $columnas_fil,            
+            'col' => $columnas_fil,
             'al' => $altitud_fil,
             'lo' => $longitud_fil,
             'nom' => $nombre_fil,
@@ -57,7 +57,7 @@ class Laboratorio_api extends REST_Controller
             'codedf' => $codEdificio,
             'acr' => $acronimo,
             'fil' => $filas,
-            'col' => $columnas,            
+            'col' => $columnas,
             'al' => $altitud,
             'lo' => $longitud,
             'nom' => $nombre,
@@ -75,15 +75,15 @@ class Laboratorio_api extends REST_Controller
     function borrarDatos_delete()
     {
         //recibir los names de input desde la vista por post
-        $codigo = $this->input->post("txtCodigo");
+        $codigo = $this->input->delete("txtCodigo");
 
         //mandar los input a arreglo y campos de la bd
         $data = array(
-            'cod' => 0,
+            'cod' => $codigo,
             'codedf' => 0,
             'acr' => '',
             'fil' => 0,
-            'col' => 0,            
+            'col' => 0,
             'al' => 0,
             'lo' => 0,
             'nom' => '',
@@ -93,5 +93,25 @@ class Laboratorio_api extends REST_Controller
             $this->response(array('status' => 'Eliminado con exito'));
         else
             $this->response(array('status' => 'fallo'));
+    }
+
+    public function crearActualizarMaquinas($codlab)
+    {
+        $data = array(
+            'cod' => $codlab,
+            'codedf' => 0,
+            'acr' => '',
+            'fil' => 0,
+            'col' => 0,
+            'al' => 0,
+            'lo' => 0,
+            'nom' => '',
+        );
+        $lab = $this->LaboratorioModel->getListaLaboratorios($data);
+        for ($i = 1; $i <= $lab->$lab_filas[0]; $i++) { 
+            for ($i=0; $i < $lab->$lab_columnas[0]; $i++) { 
+                
+            }
+        }
     }
 }
