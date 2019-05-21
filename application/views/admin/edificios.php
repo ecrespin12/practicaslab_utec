@@ -123,4 +123,4 @@
     <!-- /.modal -->
 
 
-    <script src="<?php echo base_url();?>assets/build/ajaxList/edificio.js"></script>
+    <script src="<?php echo base_url();?>assets/build/ajaxList/tipousuarios.js"></script>

@@ -53,5 +53,5 @@ $route['default_controller'] = 'auth';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-
+$route['Admin/Edificio'] = 'c_admin/Edificio/index';
 
