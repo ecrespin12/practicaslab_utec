@@ -16,46 +16,60 @@ class Maquina_api extends REST_Controller
         $this->load->model("m_admin/MaquinaModel");
     }
 
-    public function listMaquinas_get()
+    public function listMaquinas_post()
     {
         //ponemos lo que venga de los filtros;
-        $codlab = 0;
-        $fil = 0;
-        $col = 0;
-        $est = '';
-        $ere = '';
-        $ali = '';
+        $codlab = $this->input->post("lab");
+        $fil = $this->input->post("fil");
+        $col = $this->input->post("col");
+        $est = $this->input->post("est");
+        $ere = $this->input->post("ere");
+        $ali = $this->input->post("ali");
         $data = array(
-            'codlab' => $codlab,
-            'fil' => $fil,
-            'col' => $col,
+            'lab' => (int)$codlab,
+            'fil' => (int)$fil,
+            'col' => (int)$col,
             'est' => $est,
             'ere' => $ere,
-            'ali' => $ali,  
+            'ali' => $ali,
         );
-        $this->response($this->MaquinaModel->getListaMaquinas($data));
+        $list = $this->MaquinaModel->getListaMaquinas($data);
+        if(!is_null($list)){
+            $this->response(array('resp' => $list),200);
+        }else {
+
+            $this->response(array('resp'=>'No hay registros'),404);
+
+        }
     }
 
     public function guardarDatos_post()
     {
         //recibir los names de input desde la vista por post
-        $codigo = $this->input->post("txtCodigo");
-        $codEdificio = $this->input->post("ddlEdificio");
-        $acronimo = $this->input->post("txtAcronimo");
-        $filas = $this->input->post("txtFilas");
-        $columnas = $this->input->post("txtColumnas");
-        $nombre = $this->input->post("txtNombre");
-        $altitud = $this->input->post("txtAltitud");
-        $longitud = $this->input->post("txtLongitud");
+        $c1 = $this->input->post("l");
+        $c2 = $this->input->post("f");
+        $c3 = $this->input->post("c");
+
+        $codlab = $this->input->post("lab");
+        $fil = $this->input->post("fil");
+        $col = $this->input->post("col");
+        $est = $this->input->post("est");
+        $ere = $this->input->post("ere");
+        $ali = $this->input->post("ali");
 
         //mandar los input a arreglo y campos de la bd
+        $codigo = array(
+            'lab' => (int)$c1,
+            'fil' => (int)$c2,
+            'col' => (int)$c3,
+        );
         $data = array(
-            'codlab' => $codigo,
-            'fil' => $fil,
-            'col' => $col,
+            'lab' => (int)$codlab,
+            'fil' => (int)$fil,
+            'col' =>(int) $col,
             'est' => $est,
             'ere' => $ere,
-            'ali' => $ali,            
+            'ali' => $ali,
         );
         if ($this->MaquinaModel->guardarDatos($codigo, $data))
             $this->response(array('status' => 'Registro se guardo correctamente'));
@@ -67,24 +81,28 @@ class Maquina_api extends REST_Controller
     // este verbo si hace un delete como tal en la bd, en nuestros cruds no se va a eliminar info pero dejo el metodo de ejemplo
     // implementado  por si algun requerimeinto lo america utilizar
 
-    function borrarDatos_delete()
+    function borrarDatos_post()
     {
         //recibir los names de input desde la vista por post
-        $codigo = $this->input->delete("txtCodigo");
-
+        $codlab = $this->input->post("lab");
+        $fil = $this->input->post("fil");
+        $col = $this->input->post("col");
+        $est = $this->input->post("est");
+        $ere = $this->input->post("ere");
+        $ali = $this->input->post("ali");
         //mandar los input a arreglo y campos de la bd
         $data = array(
-            'codlab' => $codlab,
-            'fil' => $fil,
-            'col' => $col,
+            'lab' => (int)$codlab,
+            'fil' => (int)$fil,
+            'col' => (int)$col,
             'est' => $est,
             'ere' => $ere,
-            'ali' => $ali,  
+            'ali' => $ali,
         );
 
         if ($this->MaquinaModel->borrarDatos($data))
             $this->response(array('status' => 'Eliminado con exito'));
         else
             $this->response(array('status' => 'fallo'));
-    }    
+    }
 }

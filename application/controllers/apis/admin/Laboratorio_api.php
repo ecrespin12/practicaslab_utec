@@ -16,51 +16,59 @@ class Laboratorio_api extends REST_Controller
         $this->load->model("m_admin/LaboratorioModel");
     }
 
-    public function listLaboratorios_get()
+    public function listLaboratorios_post()
     {
         //ponemos lo que venga de los filtros;
-        $edificio_fil = 0;
-        $acronimo_fil = '';
-        $filas_fil = 0;
-        $columnas_fil = 0;
-        $nombre_fil = '';
-        $altitud_fil = 0;
-        $longitud_fil = 0;
+        $codigo = $this->post("cod");
+        $codEdificio = $this->post("edf");
+        $acronimo = $this->post("acr");
+        $filas = $this->post("fil");
+        $columnas = $this->post("col");
+        $nombre = $this->post("nom");
+        $latitud = $this->post("lat");
+        $longitud = $this->post("lon");
         $data = array(
-            'cod' => 0,
-            'codedf' => $edificio_fil,
-            'acr' => $acronimo_fil,
-            'fil' => $filas_fil,
-            'col' => $columnas_fil,
-            'al' => $altitud_fil,
-            'lo' => $longitud_fil,
-            'nom' => $nombre_fil,
+            'cod' => (int)$codigo,
+            'edf' => (int)$codEdificio,
+            'acr' => $acronimo,
+            'fil' => (int)$filas,
+            'col' => (int)$columnas,            
+            'lat' => (double)$latitud,
+            'lon' => (double)$longitud, 
+            'nom' => $nombre,          
         );
-        $this->response($this->LaboratorioModel->getListaLaboratorios($data));
+        $list= $this->LaboratorioModel->getListaLaboratorios($data);
+        if(!is_null($list)){
+            $this->response(array('resp' => $list),200);
+        }else {
+
+            $this->response(array('resp'=>'No hay registros'),404);
+
+        }
     }
 
     public function guardarDatos_post()
     {
         //recibir los names de input desde la vista por post
-        $codigo = $this->input->post("txtCodigo");
-        $codEdificio = $this->input->post("ddlEdificio");
-        $acronimo = $this->input->post("txtAcronimo");
-        $filas = $this->input->post("txtFilas");
-        $columnas = $this->input->post("txtColumnas");
-        $nombre = $this->input->post("txtNombre");
-        $altitud = $this->input->post("txtAltitud");
-        $longitud = $this->input->post("txtLongitud");
+        $codigo = $this->post("cod");
+        $codEdificio = $this->post("edf");
+        $acronimo = $this->post("acr");
+        $filas = $this->post("fil");
+        $columnas = $this->post("col");        
+        $latitud = $this->post("lat");
+        $longitud = $this->post("lon");
+        $nombre = $this->post("nom");
 
         //mandar los input a arreglo y campos de la bd
         $data = array(
-            'cod' => $codigo,
-            'codedf' => $codEdificio,
+            'cod' =>(int) $codigo,
+            'edf' => (int)$codEdificio,
             'acr' => $acronimo,
-            'fil' => $filas,
-            'col' => $columnas,
-            'al' => $altitud,
-            'lo' => $longitud,
-            'nom' => $nombre,
+            'fil' => (int)$filas,
+            'col' => (int)$columnas,            
+            'lat' => (double)$latitud,
+            'lon' => (double)$longitud,  
+            'nom' => $nombre,          
         );
         if ($this->LaboratorioModel->guardarDatos($codigo, $data))
             $this->response(array('status' => 'Registro se guardo correctamente'));
@@ -72,20 +80,20 @@ class Laboratorio_api extends REST_Controller
     // este verbo si hace un delete como tal en la bd, en nuestros cruds no se va a eliminar info pero dejo el metodo de ejemplo
     // implementado  por si algun requerimeinto lo america utilizar
 
-    function borrarDatos_delete()
+    function borrarDatos_post()
     {
         //recibir los names de input desde la vista por post
-        $codigo = $this->input->delete("txtCodigo");
+        $codigo = $this->post("cod");
 
         //mandar los input a arreglo y campos de la bd
         $data = array(
-            'cod' => $codigo,
-            'codedf' => 0,
+            'cod' => (int)$codigo,
+            'edf' => 0,
             'acr' => '',
             'fil' => 0,
             'col' => 0,
-            'al' => 0,
-            'lo' => 0,
+            'lat' => 0,
+            'lon' => 0,
             'nom' => '',
         );
 
@@ -95,23 +103,23 @@ class Laboratorio_api extends REST_Controller
             $this->response(array('status' => 'fallo'));
     }
 
-    public function crearActualizarMaquinas($codlab)
-    {
-        $data = array(
-            'cod' => $codlab,
-            'codedf' => 0,
-            'acr' => '',
-            'fil' => 0,
-            'col' => 0,
-            'al' => 0,
-            'lo' => 0,
-            'nom' => '',
-        );
-        $lab = $this->LaboratorioModel->getListaLaboratorios($data);
-        for ($i = 1; $i <= $lab->$lab_filas[0]; $i++) { 
-            for ($i=0; $i < $lab->$lab_columnas[0]; $i++) { 
+    // public function crearActualizarMaquinas($codlab)
+    // {
+    //     $data = array(
+    //         'cod' => (int)$codlab,
+    //         'codedf' => 0,
+    //         'acr' => '',
+    //         'fil' => 0,
+    //         'col' => 0,
+    //         'al' => 0,
+    //         'lo' => 0,
+    //         'nom' => '',
+    //     );
+    //     $lab = $this->LaboratorioModel->getListaLaboratorios($data);
+    //     for ($i = 1; $i <= $lab->$lab_filas[0]; $i++) { 
+    //         for ($i=0; $i < $lab->$lab_columnas[0]; $i++) { 
                 
-            }
-        }
-    }
+    //         }
+    //     }
+    // }
 }

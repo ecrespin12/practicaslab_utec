@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class LaboratorioModel extends CI_Model {
 
-	public function getListaLaboratorios($data = array('cod'=>0,'codedf'=>0,'acr'=>'','est'=>'','fil'=>0,'col'=>0,'al'=>0,'lo'=>0,'nom'=>'')) { 
+	public function getListaLaboratorios($data) { 
         $result = $this->db->query("CALL proc_crud_laboratorio(1,?,?,?,?,?,?,?,?)", $data);
         return $result->result();
     }

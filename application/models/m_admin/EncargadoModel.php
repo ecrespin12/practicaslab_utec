@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class EncargadoModel extends CI_Model {
 
-	public function getListaEncargados($data = array('cod'=>0,'nom'=>'')) { 
+	public function getListaEncargados($data) { 
         $result = $this->db->query("CALL proc_crud_encargado(1,?,?)", $data);
         return $result->result();
     }

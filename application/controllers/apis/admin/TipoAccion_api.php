@@ -5,26 +5,25 @@ use Restserver\Libraries\REST_Controller;
 require APPPATH . '/libraries/REST_Controller.php';
 require APPPATH . '/libraries/Format.php';
 
-class Encargado_api extends REST_Controller
+class TipoAccion_api extends REST_Controller
 {
     public function __construct()
     {
         parent::__construct();
 
         $this->load->database();
-        $this->load->model("m_admin/EncargadoModel");
+        $this->load->model("m_admin/TipoAccionModel");
     }
 
-    public function listEncargados_post()
+    public function listTiposAcciones_get()
     {
         //ponemos lo que venga de los filtros;
-        $codigo = $this->post("cod");
-        $nombre = $this->post("nom");      
+        $nombre_fil = '';        
         $data = array(
-            'cod' => (int)$codigo,
-            'nom' => $nombre,            
+            'cod' => 0,
+            'nom' => $nombre_fil,            
         );
-        $list = $this->EncargadoModel->getListaEncargados($data);
+        $list = $this->TipoAccionModel->getListaTipoAcciones($data);
         if(!is_null($list)){
             $this->response(array('resp' => $list),200);
         }else {
@@ -37,32 +36,34 @@ class Encargado_api extends REST_Controller
     public function guardarDatos_post()
     {
         //recibir los names de input desde la vista por post
-        $codigo = $this->post("cod");
-        $nombre = $this->post("nom");
+        $codigo = $this->post("txtCodigo");
+        $nombre = $this->post("txtNombre");
 
         //mandar los input a arreglo y campos de la bd
         $data = array(
-            'cod' => (int)$codigo,
+            'cod' => $codigo,
             'nom' => $nombre,
         );
-        if ($this->EncargadoModel->guardarDatos($codigo, $data))
+        if ($this->TipoAccionModel->guardarDatos($codigo, $data))
             $this->response(array('status' => 'Registro se guardo correctamente'));
         else
             $this->response(array('status' => 'fallo'));
     }
 
+    // este verbo si hace un delete como tal en la bd, en nuestros cruds no se va a eliminar info pero dejo el metodo de ejemplo
+    // implementado  por si algun requerimeinto lo america utilizar
     function borrarDatos_post()
     {
         //recibir los names de input desde la vista por post
-        $codigo = $this->post("cod");
+        $codigo = $this->post("txtCodigo");
 
         //mandar los input a arreglo y campos de la bd
         $data = array(
-            'cod' =>  (int)$codigo,
+            'cod' =>  $codigo,
             'nom' => '',
         );
 
-        if ($this->EncargadoModel->borrarDatos($data))
+        if ($this->TipoAccionModel->borrarDatos($data))
             $this->response(array('status' => 'Eliminado con exito'));
         else
             $this->response(array('status' => 'fallo'));

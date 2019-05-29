@@ -23,7 +23,14 @@ class TipoUsuario_api extends REST_Controller
             'cod' => 0,
             'nom' => $nombre_fil,            
         );
-        $this->response($this->TipoUsuarioModel->getListaTipoUsuarios($data));
+        $list = $this->TipoUsuarioModel->getListaTipoUsuarios($data);
+        if(!is_null($list)){
+            $this->response(array('resp' => $list),200);
+        }else {
+
+            $this->response(array('resp'=>'No hay registros'),404);
+
+        }
     }
 
     public function guardarDatos_post()

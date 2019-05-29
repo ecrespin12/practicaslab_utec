@@ -53,5 +53,47 @@ $route['default_controller'] = 'auth';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['Admin/Edificio'] = 'c_admin/Edificio/index';
+//Crud Edificios
+$route['Edificio/Listado']['POST'] = 'apis/admin/Edificio_api/listEdificios';
+$route['Edificio/guardarDatos']['POST'] = 'apis/admin/Edificio_api/guardarDatos';
+$route['Edificio/borrarDatos']['POST'] = 'apis/admin/Edificio_api/borrarDatos';
 
+//Crud Asignacion
+$route['Config/Listado']['POST'] = 'apis/admin/Configuracion_api/index';
+$route['Config/guardarDatos']['POST'] = 'apis/admin/Configuracion_api/guardarDatos';
+$route['Config/borrarDatos']['POST'] = 'apis/admin/Configuracion_api/borrarDatos';
+
+//Crud Asignacion
+$route['Asignacion/Listado']['POST'] = 'apis/admin/Asignacion_api/index';
+$route['Asignacion/guardarDatos']['POST'] = 'apis/admin/Asignacion_api/guardarDatos';
+$route['Asignacion/borrarDatos']['POST'] = 'apis/admin/Asignacion_api/borrarDatos';
+
+//Crud Encargado
+$route['Encargado/Listado']['POST'] = 'apis/admin/Encargado_Api/listEncargados';
+$route['Encargado/guardarDatos']['POST'] = 'apis/admin/Encargado_Api/guardarDatos';
+$route['Encargado/borrarDatos']['POST'] = 'apis/admin/Encargado_Api/borrarDatos';
+
+//Crud Laboratorio
+$route['Laboratorio/Listado']['POST'] = 'apis/admin/Laboratorio_api/listLaboratorios';
+$route['Laboratorio/guardarDatos']['POST'] = 'apis/admin/Laboratorio_api/guardarDatos';
+$route['Laboratorio/borrarDatos']['POST'] = 'apis/admin/Laboratorio_api/borrarDatos';
+
+//Crud Encargado de Laboratorio Pivote
+$route['EncargadoLab/Listado']['POST'] = 'apis/admin/LaboratorioEncargado_api/index';
+$route['EncargadoLab/guardarDatos']['POST'] = 'apis/admin/LaboratorioEncargado_api/guardarDatos';
+$route['EncargadoLab/borrarDatos']['POST'] = 'apis/admin/LaboratorioEncargado_api/borrarDatos';
+
+//Crud Maquina
+$route['Maquina/Listado']['POST'] = 'apis/admin/Maquina_api/listMaquinas';
+$route['Maquina/guardarDatos']['POST'] = 'apis/admin/Maquina_api/guardarDatos';
+$route['Maquina/borrarDatos']['POST'] = 'apis/admin/Maquina_api/borrarDatos';
+
+//Crud Tipo de Acción
+$route['TAccion/Listado']['POST'] = 'apis/admin/TipoAccion_api/index';
+$route['TAccion/guardarDatos']['POST'] = 'apis/admin/TipoAccion_api/guardarDatos';
+$route['TAccion/borrarDatos']['POST'] = 'apis/admin/TipoAccion_api/borrarDatos';
+
+//Crud Usuario
+$route['Usuario/Listado']['POST'] = 'apis/admin/Usuario_api/index';
+$route['Usuario/guardarDatos']['POST'] = 'apis/admin/Usuario_api/guardarDatos';
+$route['Usuario/borrarDatos']['POST'] = 'apis/admin/Usuario_api/borrarDatos';

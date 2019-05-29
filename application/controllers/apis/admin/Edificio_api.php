@@ -17,68 +17,41 @@ class Edificio_api extends REST_Controller
         $this->load->model("m_admin/EdificioModel");
     }
 
-    public function listEdificios_get()
+    public function listEdificios_post()
     {
         //ponemos lo que venga de los filtros;
-        $nombre_fil = '';
-        $acronimo_fil = '';
-        $estado_fil = '';
+        $codigo = $this->post("cod");
+        $nombre = $this->post("nom");
+        $acronimo = $this->post("acr");
+        $estado = $this->post("est");
         $data = array(
-            'cod' => 0,
-            'nom' => $nombre_fil,
-            'acr' => $acronimo_fil,
-            'est' => $estado_fil,
+            'cod' => (int)$codigo,
+            'nom' => $nombre,
+            'acr' => $acronimo,
+            'est' => $estado,
         );
-        $this->response($this->EdificioModel->getListaEdificios($data));
+
+        $list = $this->EdificioModel->getListaEdificios($data);
+        if(!is_null($list)){
+            $this->response(array('resp' => $list),200);
+        }else {
+
+            $this->response(array('resp'=>'No hay registros'),404);
+
+        }
     }
-
-    // public function insertEdificio_post() {
-
-    //     //recibir los names de input desde la vista por post
-    // 	$nombre = $this->input->post("txtNombre");
-    // 	$acronimo = $this->input->post("txtAcronimo");
-
-    // 	//mandar los input a arreglo y campos de la bd
-    // 	$data = array(
-    // 		'edf_nombre' => $nombre ,
-    // 		'edf_acronimo' => $acronimo ,
-    // 	 );
-
-    //     if($this->EdificioModel->insertEdificio($data))
-    //         $this->response(array('status' => 'Registro se guardo correctamente'));
-    //     else 
-    //         $this->response(array('status' => 'fallo'));
-    // }
-
-    // function updateEdificio_put() {
-    //     $codigo = $this->put("txtCodigo");
-    //     $nombre = $this->put("txtNombre");
-    // 	$acronimo = $this->put("txtAcronimo");
-
-    // 	//mandar los input a arreglo y campos de la bd
-    // 	$data = array(
-    //         'edf_codigo' => $codigo ,
-    // 		'edf_nombre' => $nombre,
-    // 		'edf_acronimo' => $acronimo ,
-    // 	 );
-
-    //     if($this->EdificioModel->updateEdificio($data))
-    //         $this->response(array('status' => 'Registro actualizado correctamente'));
-    //     else 
-    //         $this->response(array('status' => 'fallo'));
-    // }
 
     public function guardarDatos_post()
     {
         //recibir los names de input desde la vista por post
-        $codigo = $this->input->post("txtCodigo");
-        $nombre = $this->input->post("txtNombre");
-        $acronimo = $this->input->post("txtAcronimo");
-        $estado = $this->input->post("ddlEstado");
+        $codigo = $this->post("cod");
+        $nombre = $this->post("nom");
+        $acronimo = $this->post("acr");
+        $estado = $this->post("est");
 
         //mandar los input a arreglo y campos de la bd
         $data = array(
-            'cod' => $codigo,
+            'cod' => (int)$codigo,
             'nom' => $nombre,
             'acr' => $acronimo,
             'est' => $estado,
@@ -93,14 +66,14 @@ class Edificio_api extends REST_Controller
     // este verbo si hace un delete como tal en la bd, en nuestros cruds no se va a eliminar info pero dejo el metodo de ejemplo
     // implementado  por si algun requerimeinto lo america utilizar
 
-    function borrarDatos_delete()
+    function borrarDatos_post()
     {
         //recibir los names de input desde la vista por post
-        $codigo = $this->input->delete("txtCodigo");
+        $codigo = $this->post("cod");
 
         //mandar los input a arreglo y campos de la bd
         $data = array(
-            'cod' =>  $codigo,
+            'cod' =>  (int)$codigo,
             'nom' => '',
             'acr' => '',
             'est' => '',
